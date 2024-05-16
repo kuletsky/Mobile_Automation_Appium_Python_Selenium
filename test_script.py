@@ -4,7 +4,7 @@ from appium.options.android import UiAutomator2Options
 
 from time import sleep
 
-
+# test wikipedia
 desired_capabilities = {
     "platformName": "Android",
     "automationName": "uiautomator2",
@@ -12,7 +12,7 @@ desired_capabilities = {
     "deviceName": "Android Emulator",
     "appActivity": "org.wikipedia.main.MainActivity",
     "appPackage": "org.wikipedia",
-    "app": "C:\Users\kuletsky\Mobile_Appium_Automation_Selenium_Python\mobile_app\wikipedia.xapk"
+    "app": "C:\Users\kuletsky\Mobile_Automation_Appium_Python_Selenium\mobile_app\wikipedia.xapk"
 }
 
 appium_server_url = 'http://127.0.0.1:4723'
