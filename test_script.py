@@ -19,4 +19,13 @@ appium_server_url = 'http://127.0.0.1:4723'
 capabilities_options = UiAutomator2Options().load_capabilities(desired_capabilities)
 
 driver = webdriver.Remote(appium_server_url, options=capabilities_options)
-driver.implicitly_wait(5)
+driver.implicitly_wait(50)
+
+# click Skip onboarding
+driver.find_element(AppiumBy.ID, 'org.wikipedia:id/fragment_onboarding_skip_button').click()
+
+# click on Search icon
+# driver.find_element(AppiumBy.XPATH, '//android.widget.TextView[@text="Search Wikipedia"]').click()
+
+# search input
+# driver.find_element().send_keys('')
