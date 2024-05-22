@@ -8,11 +8,11 @@ from time import sleep
 desired_capabilities = {
     "platformName": "Android",
     "automationName": "uiautomator2",
-    "platformVersion": "10",
+    "platformVersion": "11",
     "deviceName": "Android Emulator",
     "appActivity": "org.wikipedia.main.MainActivity",
     "appPackage": "org.wikipedia",
-    "app": "C:\Users\kuletsky\Mobile_Automation_Appium_Python_Selenium\mobile_app\wikipedia.xapk"
+    "app": "/home/costa/code/QA/Projects/Mobile_Automation_Appium_Python_Selenium/mobile_app/org.wikipedia.apk"
 }
 
 appium_server_url = 'http://127.0.0.1:4723'
