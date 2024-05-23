@@ -15,9 +15,9 @@ def mobile_driver_init(context, scenario_name):
         "automationName": "uiautomator2",
         "platformVersion": "11",
         "deviceName": "Android Emulator",
-        "appActivity": "org.wikipedia.main.MainActivity",
-        "appPackage": "org.wikipedia",
-        "app": "/home/costa/code/QA/Projects/Mobile_Automation_Appium_Python_Selenium/mobile_app/org.wikipedia.apk"
+        "appActivity": "com.hotake.hotake.MainActivity",
+        "appPackage": "com.stunt.dev.application",
+        "app": "/home/costa/code/QA/Projects/Mobile_Automation_Appium_Python_Selenium/mobile_app/app-dev-release.apk"
     }
 
     appium_server_url = 'http://127.0.0.1:4723'
@@ -25,6 +25,6 @@ def mobile_driver_init(context, scenario_name):
 
     context.driver = webdriver.Remote(appium_server_url, options=capabilities_options)
     context.driver.implicitly_wait(6)
-    context.wait = WebDriverWait(context.driver, 15)
+    context.wait = WebDriverWait(context.driver, 10)
 
     # context.app = 

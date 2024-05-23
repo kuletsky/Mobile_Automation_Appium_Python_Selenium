@@ -8,7 +8,7 @@ from time import sleep
 desired_capabilities = {
     "platformName": "Android",
     "automationName": "uiautomator2",
-    "platformVersion": "11",
+    "platformVersion": "13",
     "deviceName": "Android Emulator",
     "appActivity": "org.wikipedia.main.MainActivity",
     "appPackage": "org.wikipedia",
