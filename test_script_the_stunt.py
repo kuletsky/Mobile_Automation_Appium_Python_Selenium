@@ -20,21 +20,3 @@ capabilities_options = UiAutomator2Options().load_capabilities(desired_capabilit
 
 driver = webdriver.Remote(appium_server_url, options=capabilities_options)
 sleep(20)
-
-# # click Skip onboarding
-# driver.find_element(AppiumBy.ID, 'org.wikipedia:id/fragment_onboarding_skip_button').click()
-
-# # click on Search icon
-# driver.find_element(AppiumBy.XPATH, '//android.widget.TextView[@text="Search Wikipedia"]').click()
-
-# # search input
-# driver.find_element(AppiumBy.ID, 'org.wikipedia:id/search_src_text').send_keys('Python (programming language)')
-
-# # verify 
-# actual_text = driver.find_element(AppiumBy.XPATH, "//*[@text='Python (programming language)' and @resource-id='org.wikipedia:id/page_list_item_title']").text
-# # actual_text = driver.find_element(AppiumBy.ID, 'org.wikipedia:id/page_list_item_title11').text
-# expected_text = 'Python (programming language)'
-
-# assert expected_text == actual_text, f'Expected {expected_text} but got {actual_text}'
-
-# driver.quit()
