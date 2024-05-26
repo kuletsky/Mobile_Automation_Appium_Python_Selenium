@@ -32,18 +32,18 @@ def mobile_driver_init(context, scenario_name):
 
 
 def before_scenario(context, scenario):
-    print('\nStarted scenario: ', scenario.name)
+    print('Started scenario: ', scenario.name)
     mobile_driver_init(context, scenario.name)
 
 
 def before_step(context, step):
-    print('\nStarted step: ', step)
+    print('Started step: ', step)
 
 
 def after_step(context, step):
     if step.status == 'failed':
         context.driver.save_screenshot(f'{step}.png')
-        print('\nStep failed: ', step)
+        print('Step failed: ', step)
 
 
 def after_scenario(context, feature):
