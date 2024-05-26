@@ -1,3 +1,0 @@
-Feature: Login tests
-
-    Scenario: 

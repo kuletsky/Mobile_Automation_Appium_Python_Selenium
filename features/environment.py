@@ -14,7 +14,7 @@ def mobile_driver_init(context, scenario_name):
     desired_capabilities = {
         "platformName": "Android",
         "automationName": "uiautomator2",
-        "platformVersion": "11",
+        "platformVersion": "13",
         "deviceName": "Android Emulator",
         "appActivity": "com.hotake.hotake.MainActivity",
         "appPackage": "com.stunt.dev.application",

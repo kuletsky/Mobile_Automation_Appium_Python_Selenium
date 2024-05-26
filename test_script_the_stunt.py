@@ -4,7 +4,7 @@ from appium.options.android import UiAutomator2Options
 
 from time import sleep
 
-# test coonect
+# test conect
 desired_capabilities = {
     "platformName": "Android",
     "automationName": "uiautomator2",
