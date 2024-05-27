@@ -23,7 +23,7 @@ def put_phone_number(context):
 @when('Click Next button')
 def next_button(context):
     context.driver.find_element(AppiumBy.XPATH, '//android.view.View[@content-desc="Next"]').click()
-    sleep(4)
+    sleep(6)
 
 
 @when('Put the code')

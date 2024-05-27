@@ -46,7 +46,7 @@ def before_step(context, step):
 def after_step(context, step):
     if step.status == 'failed':
         logger.info(f'Step failed: {step}')
-        context.driver.save_screenshot(f'failed_tests/{step}.png')
+        context.driver.save_screenshot(f'step_failed_screens/{step}.png')
         print('Step failed: ', step)
 
 
