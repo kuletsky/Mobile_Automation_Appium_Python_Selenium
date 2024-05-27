@@ -19,4 +19,5 @@ appium_server_url = 'http://127.0.0.1:4723'
 capabilities_options = UiAutomator2Options().load_capabilities(desired_capabilities)
 
 driver = webdriver.Remote(appium_server_url, options=capabilities_options)
+# driver.find_element(AppiumBy.ID, 'com.android.permissioncontroller:id/permission_allow_button').click()
 sleep(20)
