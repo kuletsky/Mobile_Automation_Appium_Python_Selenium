@@ -75,7 +75,10 @@ docs/_build/
 # PyBuilder
 target/
 mobile_app/*
+!mobile_app/.gitkeep
+
 failed_tests/*
+!failed_tests/.gitkeep
 
 # Jupyter Notebook
 .ipynb_checkpoints

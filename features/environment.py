@@ -1,6 +1,7 @@
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
 from selenium.webdriver.support.wait import WebDriverWait
+from log_files.logger import logger
 
 from app.apllication import Application
 from time import sleep
@@ -33,15 +34,18 @@ def mobile_driver_init(context, scenario_name):
 
 def before_scenario(context, scenario):
     print('Started scenario: ', scenario.name)
+    logger.info(f'Started scenario: {scenario.name}')
     mobile_driver_init(context, scenario.name)
 
 
 def before_step(context, step):
     print('Started step: ', step)
+    logger.info(f'Started step: {step}')
 
 
 def after_step(context, step):
     if step.status == 'failed':
+        logger.info(f'Step failed: {step}')
         context.driver.save_screenshot(f'failed_tests/{step}.png')
         print('Step failed: ', step)
 
