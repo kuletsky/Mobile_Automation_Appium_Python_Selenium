@@ -42,7 +42,7 @@ def before_step(context, step):
 
 def after_step(context, step):
     if step.status == 'failed':
-        context.driver.save_screenshot(f'{step}.png')
+        context.driver.save_screenshot(f'failed_tests/{step}.png')
         print('Step failed: ', step)
 
 

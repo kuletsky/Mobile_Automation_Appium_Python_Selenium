@@ -29,7 +29,7 @@ def next_button(context):
 @when('Put the code')
 def put_the_code(context):
     context.driver.find_element(AppiumBy.XPATH, '//android.widget.EditText').click()
-    context.driver.find_element(AppiumBy.XPATH, '//android.widget.EditText').send_keys('111111')
+    context.driver.find_element(AppiumBy.XPATH, '//android.widget.EditText').send_keys('1114111')
 
 
 @then('Verify success login')

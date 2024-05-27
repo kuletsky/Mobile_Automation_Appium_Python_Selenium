@@ -54,6 +54,7 @@ coverage.xml
 # Translations
 *.mo
 *.pot
+*.png
 
 # Django stuff:
 *.log
@@ -73,7 +74,8 @@ docs/_build/
 
 # PyBuilder
 target/
-mobile_app/
+mobile_app/*
+failed_tests/*
 
 # Jupyter Notebook
 .ipynb_checkpoints
