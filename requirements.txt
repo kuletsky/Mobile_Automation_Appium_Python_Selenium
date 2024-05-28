@@ -1,0 +1,5 @@
+behave
+selenium
+Appium-Python-Client
+webdriver-manager
+allure-behave

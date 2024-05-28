@@ -26,8 +26,9 @@ def mobile_driver_init(context, scenario_name):
     capabilities_options = UiAutomator2Options().load_capabilities(desired_capabilities)
     context.driver = webdriver.Remote(appium_server_url, options=capabilities_options)
 
-    context.driver.implicitly_wait(6)
-    context.wait = WebDriverWait(context.driver, 10)
+    # wait parameters
+    context.driver.implicitly_wait(10)
+    context.driver.wait = WebDriverWait(context.driver, 15)
 
     context.app = Application(context.driver)
 
@@ -45,7 +46,7 @@ def before_step(context, step):
 
 def after_step(context, step):
     if step.status == 'failed':
-        logger.info(f'Step failed: {step}')
+        logger.warning(f'Step failed: {step}')
         context.driver.save_screenshot(f'step_failed_screens/{step}.png')
         print('Step failed: ', step)
 

@@ -1,6 +1,8 @@
 from appium.webdriver.common.appiumby import AppiumBy
 from behave import when, then
 
+from selenium.webdriver.support import expected_conditions as EC
+
 from time import sleep
 
 BTN_ALLOW = (AppiumBy.ID, 'com.android.permissioncontroller:id/permission_allow_button')
@@ -29,11 +31,11 @@ def put_phone_number(context):
 @when('Click Next button')
 def next_button(context):
     context.driver.find_element(*BTN_NEXT).click()
-    sleep(6)
 
 
 @when('Put the code')
 def put_the_code(context):
+    context.driver.wait.until(EC.element_to_be_clickable(BTN_NEXT))
     context.driver.find_element(*INPUT_FIELD).click()
     context.driver.find_element(*INPUT_FIELD).send_keys('111111')
 
@@ -41,4 +43,3 @@ def put_the_code(context):
 @then('Verify success login')
 def verify_login(context):
     context.driver.find_element(*TAG_ROOM)
-    # print(actual_result)
