@@ -6,4 +6,4 @@ class Page:
 
     def __init__(self, driver):
         self.driver = driver
-        self.wait = WebDriverWait(driver, timeout=10)
+        self.wait = WebDriverWait(driver, timeout=15)

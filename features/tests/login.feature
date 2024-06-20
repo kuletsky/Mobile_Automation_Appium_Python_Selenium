@@ -8,5 +8,4 @@ Feature: Login tests
       And Put the code
       And Click Next button
       Then Verify success login
-
  
