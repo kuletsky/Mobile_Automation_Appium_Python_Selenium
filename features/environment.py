@@ -13,36 +13,36 @@ def mobile_driver_init(context, scenario_name):
     :param context: Behave context
     """
     ### BROWSERSTACK ###
-    # bs_user = 'kuletsky_D18EAl'
-    # bs_key = 'cjrUnYqkUDR8xPwnqxXj'
-    # url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
-    #
-    # options = Options()
-    # bstack_options = {
-    #     # 'os': 'OS X',
-    #     # 'osVersion': 'Monterey',
-    #     'deviceName': 'Pixel 7',
-    #     "realMobile": "true",
-    #     'browserName': 'Chrome',
-    #     'sessionName': scenario_name
-    # }
-    # options.set_capability('bstack:options', bstack_options)
-    # context.driver = webdriver.Remote(command_executor=url, options=options)
+    bs_user = 'kuletsky_D18EAl'
+    bs_key = 'cjrUnYqkUDR8xPwnqxXj'
+    url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+
+    options = Options()
+    bstack_options = {
+        # 'os': 'OS X',
+        # 'osVersion': 'Monterey',
+        'deviceName': 'Pixel 7',
+        "realMobile": "true",
+        'browserName': 'Chrome',
+        'sessionName': scenario_name
+    }
+    options.set_capability('bstack:options', bstack_options)
+    context.driver = webdriver.Remote(command_executor=url, options=options)
 
     ### ANDROID STUDIO EMULATOR SDK ###
-    desired_capabilities = {
-        "platformName": "Android",
-        "automationName": "uiautomator2",
-        "platformVersion": "13",
-        "deviceName": "Android Emulator",
-        "appActivity": "com.hotake.hotake.MainActivity",
-        "appPackage": "com.stunt.dev.application",
-        "app": "/home/costa/code/QA/Projects/Mobile_Automation_Appium_Python_Selenium/mobile_app/app-dev-release.apk"
-    }
-
-    appium_server_url = 'http://127.0.0.1:4723'
-    capabilities_options = UiAutomator2Options().load_capabilities(desired_capabilities)
-    context.driver = webdriver.Remote(appium_server_url, options=capabilities_options)
+    # desired_capabilities = {
+    #     "platformName": "Android",
+    #     "automationName": "uiautomator2",
+    #     "platformVersion": "13",
+    #     "deviceName": "Android Emulator",
+    #     "appActivity": "com.hotake.hotake.MainActivity",
+    #     "appPackage": "com.stunt.dev.application",
+    #     "app": "/home/costa/code/QA/Projects/Mobile_Automation_Appium_Python_Selenium/mobile_app/app-dev-release.apk"
+    # }
+    #
+    # appium_server_url = 'http://127.0.0.1:4723'
+    # capabilities_options = UiAutomator2Options().load_capabilities(desired_capabilities)
+    # context.driver = webdriver.Remote(appium_server_url, options=capabilities_options)
 
     # wait parameters
     context.driver.implicitly_wait(10)
